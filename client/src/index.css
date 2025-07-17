@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(47, 96%, 53%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Custom beauty salon colors */
+  --rose-gold: hsl(47, 96%, 53%);
+  --soft-pink: hsl(349, 83%, 96%);
+  --deep-rose: hsl(4, 39%, 49%);
+  --cream: hsl(60, 9%, 98%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(47, 96%, 53%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .gradient-overlay {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.9) 0%, rgba(184, 84, 80, 0.9) 100%);
+  }
+
+  .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .text-rose-gold {
+    color: hsl(47, 96%, 53%);
+  }
+
+  .text-soft-pink {
+    color: hsl(349, 83%, 96%);
+  }
+
+  .text-deep-rose {
+    color: hsl(4, 39%, 49%);
+  }
+
+  .text-cream {
+    color: hsl(60, 9%, 98%);
+  }
+
+  .bg-rose-gold {
+    background-color: hsl(47, 96%, 53%);
+  }
+
+  .bg-soft-pink {
+    background-color: hsl(349, 83%, 96%);
+  }
+
+  .bg-deep-rose {
+    background-color: hsl(4, 39%, 49%);
+  }
+
+  .bg-cream {
+    background-color: hsl(60, 9%, 98%);
+  }
+
+  .border-rose-gold {
+    border-color: hsl(47, 96%, 53%);
+  }
+
+  .hover\:bg-rose-gold:hover {
+    background-color: hsl(47, 96%, 53%);
+  }
+
+  .hover\:bg-deep-rose:hover {
+    background-color: hsl(4, 39%, 49%);
+  }
+
+  .hover\:text-rose-gold:hover {
+    color: hsl(47, 96%, 53%);
+  }
+
+  .hover\:text-deep-rose:hover {
+    color: hsl(4, 39%, 49%);
+  }
+
+  .focus\:ring-rose-gold:focus {
+    --tw-ring-color: hsl(47, 96%, 53%);
+  }
+}
